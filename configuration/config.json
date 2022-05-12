@@ -1,0 +1,23 @@
+{
+    "chrome_driver": "C:\\Users\\programi\\PycharmProjects\\asw_python\\selenium_python\\configuration\\chromedriver.exe",
+    "download_directory" : "C:\\workspace\\dominus_test\\testsJSF\\DownloadDefault\\",
+    "error_folder": "C:\\Users\\programi\\Desktop\\Excel\\error\\",
+    "success_folder": "C:\\Users\\programi\\Desktop\\Excel\\success\\",
+    "logger_location": "C:\\Users\\programi\\PycharmProjects\\asw_python\\selenium_python\\util\\logger.log",
+    "excel_folder": "C:\\Users\\programi\\Desktop\\Excel\\",
+    "csv_sql_folder": "C:\\Users\\programi\\Desktop\\SQL\\",
+    "excel_sheet": "Test",
+    "log_folder": "C:\\Users\\programi\\Desktop\\Log\\",
+    "db_host": "localhost",
+    "db_port": "3306",
+    "db_username": "root",
+    "db_password": "telefon",
+    "db_schema": "sema",
+    "ora_instantclient": "C:\\instantclient_19_14",
+    "ora_username": "testlilly",
+    "ora_password": "testlilly",
+    "ora_ip": "192.168.3.209",
+    "ora_port": "1521",
+    "ora_sid": "asw.asw.local"
+
+}

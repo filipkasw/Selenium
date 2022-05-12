@@ -1,0 +1,259 @@
+2022-05-11 13:50:49,462 - Logger - INFO - - SeleniumCore - DRIVER - Driver je pokrenut... -   - 
+2022-05-11 13:50:49,646 - Logger - INFO - - ReadExcel - AUTOMATSKI TEST: ATcenovnikprodaje010_UnosEXE.xls -   -   - 
+2022-05-11 13:50:49,647 - Logger - INFO - - [93m********** - 2. Korak - **********[0m -   - 
+2022-05-11 13:50:49,652 - Logger - INFO - - [33mKomanda nije implementirana[0m -   -   -   - 
+2022-05-11 13:50:49,652 - Logger - INFO - - [93m********** - 3. SQL - **********[0m -   - 
+2022-05-11 13:50:49,660 - Logger - INFO - - SQL_CSV - sql_to_compare -   -   - 
+2022-05-11 13:50:49,660 - Logger - INFO - - ------------------------------------ -   -   -   - 
+2022-05-11 13:50:49,660 - Logger - INFO - - [32mValues, SQL-COMPARE:  - C:\workspace\dominus_test\testsJSF\SQL\DbPar_Cen.csv -  [0m -   - 
+2022-05-11 13:50:49,660 - Logger - INFO - - ------------------------------------ -   -   -   - 
+2022-05-11 13:50:49,660 - Logger - INFO - - SQL_CSV - compare_query_and_csv - SELECT * FROM db_parametri where sifra like '%Dec' - C:\workspace\dominus_test\testsJSF\SQL\DbPar_Cen.csv - 
+2022-05-11 13:50:49,660 - Logger - INFO - - [35mOracleDB - execute_query - ŠALJEM UPIT: SELECT * FROM db_parametri where sifra like '%Dec'[0m -   - 
+2022-05-11 13:50:49,661 - Logger - INFO - - OracleDB - make_connection with USER: testlilly - PASSWORD: testlilly -   - 
+2022-05-11 13:50:49,766 - Logger - INFO - - <cx_Oracle.Connection to testlilly@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.3.209)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=asw.asw.local)))> -   -   -   - 
+2022-05-11 13:50:49,768 - Logger - INFO - - [32mOracleDB - **ZAVRŠEN UPIT**[0m -   -   - 
+2022-05-11 13:50:49,773 - Logger - INFO - - READ DATA FROM CSV: C:\workspace\dominus_test\testsJSF\SQL\DbPar_Cen.csv - DELIMITER: ; -   -   - 
+2022-05-11 13:50:49,815 - Logger - INFO - - SQL_CSV - comparison data from DB : 
+ -         SIFRA VRIJEDNOST  ... VREDNOSTI TIPPODATKA
+0  mlpKalkDec   Decimal4  ...   -999999     String
+1  vlpCenaDec   Decimal2  ...   -999999     String
+2  vlpKalkDec   Decimal4  ...   -999999     String
+
+[3 rows x 7 columns] -   - 
+2022-05-11 13:50:49,815 - Logger - INFO - - SQL_CSV - type:  - <class 'pandas.core.frame.DataFrame'> -   - 
+2022-05-11 13:50:49,826 - Logger - INFO - - SQL_CSV - comparison data from CSV : 
+  -         SIFRA VRIJEDNOST  ... VREDNOSTI TIPPODATKA
+0  mlpKalkDec   Decimal4  ...   -999999     String
+1  vlpCenaDec   Decimal2  ...   -999999     String
+2  vlpKalkDec   Decimal4  ...   -999999     String
+
+[3 rows x 7 columns] -   - 
+2022-05-11 13:50:49,826 - Logger - INFO - - SQL_CSV - type:  - <class 'pandas.core.frame.DataFrame'> -   - 
+2022-05-11 13:50:49,826 - Logger - INFO - - SQL_CSV - organize_data -   -   - 
+2022-05-11 13:50:49,827 - Logger - INFO - - SQL_CSV - organize_data -   -   - 
+2022-05-11 13:50:49,828 - Logger - INFO - - SQL_CSV - compare_sizes - ulazi -   - 
+2022-05-11 13:50:49,828 - Logger - INFO - - [32mELEMENTI SU ISTI:  - True - [0m -   - 
+2022-05-11 13:50:49,850 - Logger - INFO - - [93m********** - 4. Script - **********[0m -   - 
+2022-05-11 13:50:49,861 - Logger - INFO - - ScriptController - find_script_and_excute -   -   - 
+2022-05-11 13:50:49,861 - Logger - INFO - - ScriptController - NAZIV SCRIPTE:  - updateParametara -   - 
+2022-05-11 13:50:49,861 - Logger - INFO - - ScriptController - Ulazak u switcher i traženje metode: updateParametara -   -   - 
+2022-05-11 13:50:49,861 - Logger - INFO - - VLP_excelScript - --- VratiKalkulacijaRuc --- - VLP -   - 
+2022-05-11 13:50:49,861 - Logger - INFO - - excelScript - VratiKalkulacijaRuc -   -   - 
+2022-05-11 13:50:49,861 - Logger - INFO - - [35mOracleDB - execute_query - ŠALJEM UPIT: select vrijednost from db_parametri where sifra='kalkulacijaRUC'[0m -   - 
+2022-05-11 13:50:49,862 - Logger - INFO - - OracleDB - make_connection with USER: testlilly - PASSWORD: testlilly -   - 
+2022-05-11 13:50:49,897 - Logger - INFO - - <cx_Oracle.Connection to testlilly@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.3.209)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=asw.asw.local)))> -   -   -   - 
+2022-05-11 13:50:49,898 - Logger - INFO - - [32mOracleDB - **ZAVRŠEN UPIT**[0m -   -   - 
+2022-05-11 13:50:49,903 - Logger - INFO - - [93m********** - 5. login - **********[0m -   - 
+2022-05-11 13:50:49,917 - Logger - INFO - - CommandEvent, PRIPREMLJENI PODACI, login: - adm - service -   - 
+2022-05-11 13:50:49,917 - Logger - INFO - - DominusAction - login_to_dominus: - adm - service - 
+2022-05-11 13:50:50,179 - Logger - INFO - - SeleniumCore - getSelUrl - http://t-rex:8891/dominus_testlilly -   - 
+2022-05-11 13:50:50,223 - Logger - INFO - - SeleniumCore - waitForIdElement - Vreme:10 - ID value:j_username - 
+2022-05-11 13:50:50,236 - Logger - INFO - - SeleniumCore - getAttributeValue: -  -   - 
+2022-05-11 13:50:50,237 - Logger - INFO - - SeleniumCore - Pražnjenje podataka TEXT -   -   - 
+2022-05-11 13:50:52,267 - Logger - INFO - - SeleniumCore - Postavljenje novih podataka u input:  - adm -   - 
+2022-05-11 13:50:52,564 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269852341.png -   - 
+2022-05-11 13:50:52,611 - Logger - INFO - - SeleniumCore - waitForIdElement - Vreme:10 - ID value:j_password - 
+2022-05-11 13:50:52,621 - Logger - INFO - - SeleniumCore - getAttributeValue: -  -   - 
+2022-05-11 13:50:52,621 - Logger - INFO - - SeleniumCore - Pražnjenje podataka TEXT -   -   - 
+2022-05-11 13:50:54,658 - Logger - INFO - - SeleniumCore - Postavljenje novih podataka u input:  - service -   - 
+2022-05-11 13:50:54,971 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269854758.png -   - 
+2022-05-11 13:50:54,983 - Logger - INFO - - DominusAction - dominus_taster: - //button[.='Prijava'] -   - 
+2022-05-11 13:50:55,011 - Logger - INFO - - SeleniumCore - waitForXpathElement - //button[.='Prijava'] -   - 
+2022-05-11 13:50:55,252 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269855043.png -   - 
+2022-05-11 13:50:55,286 - Logger - INFO - - SeleniumCore - Click na:  - Prijava -   - 
+2022-05-11 13:50:55,713 - Logger - INFO - - DominusAction - check_error: - //*[contains(text(),'Neispravna lozinka')] -   - 
+2022-05-11 13:50:55,713 - Logger - INFO - - SeleniumCore - findElements with WAIT - //*[contains(text(),'Neispravna lozinka')] -   - 
+2022-05-11 13:51:06,260 - Logger - INFO - - SeleniumCore - Očekivani izuzetak, nije pronadjen ERROR na stranici: - //*[contains(text(),'Neispravna lozinka')] -   - 
+2022-05-11 13:51:06,260 - Logger - INFO - - [93m********** - 6. Aplikacija - **********[0m -   - 
+2022-05-11 13:51:06,266 - Logger - INFO - - CommandEvent - IZBORA APLIKACIJE:  - VELEPRODAJA -   - 
+2022-05-11 13:51:06,267 - Logger - INFO - - FILTER U DROP_DOWN:  - start: - aplikacija - VELEPRODAJA - 
+2022-05-11 13:51:06,305 - Logger - INFO - - SeleniumCore - waitForIdElement - Vreme: 10 - ID value: start:aplikacija_label - 
+2022-05-11 13:51:06,546 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269866347.png -   - 
+2022-05-11 13:51:06,581 - Logger - INFO - - SeleniumCore - Click na:  - ADMINISTRACIJA SISTEMA -   - 
+2022-05-11 13:51:06,679 - Logger - INFO - - SeleniumCore - waitForIdElement - Vreme: 10 - ID value: start:aplikacija_filter - 
+2022-05-11 13:51:06,689 - Logger - INFO - - SeleniumCore - getAttributeValue: -  -   - 
+2022-05-11 13:51:06,689 - Logger - INFO - - SeleniumCore - Pražnjenje podataka TEXT -   -   - 
+2022-05-11 13:51:08,719 - Logger - INFO - - SeleniumCore - Postavljenje novih podataka u input:  - VELEPRODAJA -   - 
+2022-05-11 13:51:09,076 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269868827.png -   - 
+2022-05-11 13:51:09,101 - Logger - INFO - - SeleniumCore - Koristim TAB nakon unosa... -   -   - 
+2022-05-11 13:51:11,148 - Logger - INFO - - CommandEvent - IZBOR ORG_JED:  - CM - CENTRALNI MAGACIN -   - 
+2022-05-11 13:51:11,148 - Logger - INFO - - FILTER U DROP_DOWN:  - start: - orgjed - CM - CENTRALNI MAGACIN - 
+2022-05-11 13:51:11,184 - Logger - INFO - - SeleniumCore - waitForIdElement - Vreme: 10 - ID value: start:orgjed_label - 
+2022-05-11 13:51:11,427 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269871225.png -   - 
+2022-05-11 13:51:11,464 - Logger - INFO - - SeleniumCore - Click na:  - CARINSKI - CARINSKI MAGACIN -   - 
+2022-05-11 13:51:11,571 - Logger - INFO - - SeleniumCore - waitForIdElement - Vreme: 10 - ID value: start:orgjed_filter - 
+2022-05-11 13:51:11,583 - Logger - INFO - - SeleniumCore - getAttributeValue: -  -   - 
+2022-05-11 13:51:11,583 - Logger - INFO - - SeleniumCore - Pražnjenje podataka TEXT -   -   - 
+2022-05-11 13:51:13,629 - Logger - INFO - - SeleniumCore - Postavljenje novih podataka u input:  - CM - CENTRALNI MAGACIN -   - 
+2022-05-11 13:51:14,018 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269873802.png -   - 
+2022-05-11 13:51:14,032 - Logger - INFO - - SeleniumCore - Koristim TAB nakon unosa... -   -   - 
+2022-05-11 13:51:16,064 - Logger - INFO - - CommandEvent - START -   -   - 
+2022-05-11 13:51:16,064 - Logger - INFO - - DominusAction - dominus_taster: - //button[.='Start'] -   - 
+2022-05-11 13:51:16,105 - Logger - INFO - - SeleniumCore - waitForXpathElement - //button[.='Start'] -   - 
+2022-05-11 13:51:16,349 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269876147.png -   - 
+2022-05-11 13:51:16,373 - Logger - INFO - - SeleniumCore - Click na:  - Start -   - 
+2022-05-11 13:51:28,510 - Logger - INFO - - SeleniumCore - findElem -   -   - 
+2022-05-11 13:51:28,510 - Logger - INFO - - SeleniumCore - findElements with WAIT - //*[@id='izmenaAplOrgjed'] -   - 
+2022-05-11 13:51:28,523 - Logger - INFO - - SeleniumCore - UKUPAN broj elemenata: 1 -   -   - 
+2022-05-11 13:51:28,537 - Logger - INFO - - SeleniumCore - Filtrirano, VIDLJIVIH: 1 -   -   - 
+2022-05-11 13:51:28,537 - Logger - INFO - - SeleniumCore - findElem, dobijen broj elemenata: 1 -   -   - 
+2022-05-11 13:51:28,557 - Logger - INFO - - APP i ORG CONTAINER CONTENT:  - VELEPRODAJA (CM CENTRALNI MAGACIN ( LUKA BEOGRAD)) -   -   - 
+2022-05-11 13:51:28,566 - Logger - INFO - - PROVERA APP I ORG:  - VELEPRODAJA - CM CENTRALNI MAGACIN - VELEPRODAJA CM CENTRALNI MAGACIN LUKA BEOGRAD - 
+2022-05-11 13:51:28,566 - Logger - INFO - - POSLI PROVERU - VELEPRODAJA - CM CENTRALNI MAGACIN - VELEPRODAJA CM CENTRALNI MAGACIN LUKA BEOGRAD - 
+2022-05-11 13:51:28,568 - Logger - INFO - - [93m********** - 7. Putanja - **********[0m -   - 
+2022-05-11 13:51:28,574 - Logger - INFO - - CommandEvent - putanja - data_list:  - ['Dokumenti', 'Cenovnik', 'Cenovnik prodaje'] - 
+2022-05-11 13:51:28,611 - Logger - INFO - - SeleniumCore - findByLinkAndWait with WAIT: Dokumenti -   -   - 
+2022-05-11 13:51:28,611 - Logger - INFO - - SeleniumCore - hoverAction -   -   - 
+2022-05-11 13:51:29,137 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269888954.png -   - 
+2022-05-11 13:51:29,216 - Logger - INFO - - SeleniumCore - findByLinkAndWait with WAIT: Cenovnik -   -   - 
+2022-05-11 13:51:29,216 - Logger - INFO - - SeleniumCore - hoverAction -   -   - 
+2022-05-11 13:51:29,704 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269889561.png -   - 
+2022-05-11 13:51:29,777 - Logger - INFO - - SeleniumCore - findByLinkAndWait with WAIT: Cenovnik prodaje -   -   - 
+2022-05-11 13:51:29,778 - Logger - INFO - - SeleniumCore - hoverAction -   -   - 
+2022-05-11 13:51:30,252 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269890086.png -   - 
+2022-05-11 13:51:30,314 - Logger - INFO - - SeleniumCore - findByLinkAndWait with WAIT: Cenovnik prodaje -   -   - 
+2022-05-11 13:51:30,497 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269890345.png -   - 
+2022-05-11 13:51:30,535 - Logger - INFO - - SeleniumCore - Click na:  - Cenovnik prodaje -   - 
+2022-05-11 13:51:32,082 - Logger - INFO - - [93m********** - 8. LookUp - **********[0m -   - 
+2022-05-11 13:51:32,087 - Logger - INFO - - POSTAVLJANJE NAJVECEG Z-INDEX -   -   -   - 
+2022-05-11 13:51:32,087 - Logger - INFO - - SeleniumCore - Povratak driver na default -   -   - 
+2022-05-11 13:51:32,090 - Logger - INFO - - SeleniumCore - findElements with WAIT - //div[(contains(@style,'z-index')) and (contains(@style,'display: block')) and not(contains(@class,'datepicker'))  and  not(contains(@class,'ui-tooltip')) and not(contains(@class,'growl-info growl'))] -   - 
+2022-05-11 13:51:42,631 - Logger - INFO - - NEMA PROZORA Z-INDEX -   -   -   - 
+2022-05-11 13:51:42,631 - Logger - INFO - - DominusAction - dominus_taster: - //button[.='Upit'] -   - 
+2022-05-11 13:51:42,700 - Logger - INFO - - SeleniumCore - waitForXpathElement - //button[.='Upit'] -   - 
+2022-05-11 13:51:42,915 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269902749.png -   - 
+2022-05-11 13:51:42,950 - Logger - INFO - - SeleniumCore - Click na:  - Upit -   - 
+2022-05-11 13:51:53,067 - Logger - INFO - - POSTAVLJANJE NAJVECEG Z-INDEX -   -   -   - 
+2022-05-11 13:51:53,067 - Logger - INFO - - SeleniumCore - Povratak driver na default -   -   - 
+2022-05-11 13:51:53,072 - Logger - INFO - - SeleniumCore - findElements with WAIT - //div[(contains(@style,'z-index')) and (contains(@style,'display: block')) and not(contains(@class,'datepicker'))  and  not(contains(@class,'ui-tooltip')) and not(contains(@class,'growl-info growl'))] -   - 
+2022-05-11 13:51:53,085 - Logger - INFO - - SeleniumCore - UKUPAN broj elemenata: 1 -   -   - 
+2022-05-11 13:51:53,099 - Logger - INFO - - SeleniumCore - Filtrirano, VIDLJIVIH: 1 -   -   - 
+2022-05-11 13:51:53,125 - Logger - INFO - - SeleniumCore - getAttributeValue: - width: auto; height: auto; left: 786px; top: 365.5px; z-index: 1001; display: block; -   - 
+2022-05-11 13:51:53,138 - Logger - INFO - - SeleniumCore - getAttributeValue: - None -   - 
+2022-05-11 13:51:53,139 - Logger - INFO - - SeleniumCore - findElem -   -   - 
+2022-05-11 13:51:53,139 - Logger - INFO - - SeleniumCore - findElements with WAIT - //iframe -   - 
+2022-05-11 13:51:53,151 - Logger - INFO - - SeleniumCore - UKUPAN broj elemenata: 1 -   -   - 
+2022-05-11 13:51:53,162 - Logger - INFO - - SeleniumCore - Filtrirano, NEMA VIDLJIVIH!!! -   -   - 
+2022-05-11 13:51:53,162 - Logger - INFO - - NEMA PROZORA Z-INDEX -   -   -   - 
+2022-05-11 13:51:53,162 - Logger - INFO - - OBRADA LOOKUP UPITA: - ['Tip cene objekta: TTCEN041', 'Tip cene objekta: O', 'Vreme od: 27.02.2014 00:00:01', 'Potvrđen: D'] -   -   - 
+2022-05-11 13:51:53,162 - Logger - INFO - - RESET LOOKUP -   -   -   - 
+2022-05-11 13:51:53,162 - Logger - INFO - - SeleniumCore - findElem -   -   - 
+2022-05-11 13:51:53,162 - Logger - INFO - - SeleniumCore - findElements with WAIT - //a[contains(@id,'resetBtn') and contains(@class,'fa fa-refresh')] -   - 
+2022-05-11 13:51:53,175 - Logger - INFO - - SeleniumCore - UKUPAN broj elemenata: 3 -   -   - 
+2022-05-11 13:51:53,207 - Logger - INFO - - SeleniumCore - Filtrirano, VIDLJIVIH: 1 -   -   - 
+2022-05-11 13:51:53,207 - Logger - INFO - - SeleniumCore - findElem, dobijen broj elemenata: 1 -   -   - 
+2022-05-11 13:51:53,420 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269913249.png -   - 
+2022-05-11 13:51:53,444 - Logger - INFO - - SeleniumCore - Click na:  -  -   - 
+2022-05-11 13:52:03,502 - Logger - INFO - - DROP DOWN SPUSTANJE: - Tip cene objekta - columnSelect0 -   - 
+2022-05-11 13:52:03,503 - Logger - INFO - - SeleniumCore - findElements with WAIT - //label[contains(@id,'columnSelect0_label') or contains(@id,'columnselect0_label')] -   - 
+2022-05-11 13:52:03,529 - Logger - INFO - - SeleniumCore - UKUPAN broj elemenata: 1 -   -   - 
+2022-05-11 13:52:03,546 - Logger - INFO - - SeleniumCore - Filtrirano, VIDLJIVIH: 1 -   -   - 
+2022-05-11 13:52:03,760 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269923591.png -   - 
+2022-05-11 13:52:03,797 - Logger - INFO - - SeleniumCore - clickWithPerform na:  - Id -   - 
+2022-05-11 13:52:04,132 - Logger - INFO - - DROP DOWN ODABIR: - Tip cene objekta - columnSelect0 -   - 
+2022-05-11 13:52:04,132 - Logger - INFO - - SeleniumCore - findElements with WAIT - //div[contains(@class,'ui-selectonemenu-items-wrapper')]//li[contains(.,'Tip cene objekta') or contains(.,'tip cene objekta') or contains(.,'Tip cene objekta')] -   - 
+2022-05-11 13:52:04,148 - Logger - INFO - - SeleniumCore - UKUPAN broj elemenata: 1 -   -   - 
+2022-05-11 13:52:04,163 - Logger - INFO - - SeleniumCore - Filtrirano, VIDLJIVIH: 1 -   -   - 
+2022-05-11 13:52:04,389 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269924210.png -   - 
+2022-05-11 13:52:04,420 - Logger - INFO - - SeleniumCore - Click na:  - Tip cene objekta -   - 
+2022-05-11 13:52:14,518 - Logger - INFO - - SeleniumCore - findElem -   -   - 
+2022-05-11 13:52:14,518 - Logger - INFO - - SeleniumCore - findElements with WAIT - //input[contains(@id,'searchForm:inputValue1') and contains(@id,'0')] -   - 
+2022-05-11 13:52:14,533 - Logger - INFO - - SeleniumCore - UKUPAN broj elemenata: 1 -   -   - 
+2022-05-11 13:52:14,547 - Logger - INFO - - SeleniumCore - Filtrirano, VIDLJIVIH: 1 -   -   - 
+2022-05-11 13:52:14,547 - Logger - INFO - - SeleniumCore - findElem, dobijen broj elemenata: 1 -   -   - 
+2022-05-11 13:52:14,561 - Logger - INFO - - SeleniumCore - getAttributeValue: -  -   - 
+2022-05-11 13:52:14,561 - Logger - INFO - - SeleniumCore - Pražnjenje podataka TEXT -   -   - 
+2022-05-11 13:52:16,602 - Logger - INFO - - SeleniumCore - Postavljenje novih podataka u input:  - TTCEN041 -   - 
+2022-05-11 13:52:16,930 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269936746.png -   - 
+2022-05-11 13:52:16,958 - Logger - INFO - - SeleniumCore - Koristim TAB nakon unosa... -   -   - 
+2022-05-11 13:52:19,005 - Logger - INFO - - SeleniumCore - findElem -   -   - 
+2022-05-11 13:52:19,005 - Logger - INFO - - SeleniumCore - findElements with WAIT - //a[contains(@id,'addConditionBtn') and contains(@class,'fa fa-plus-circle')] -   - 
+2022-05-11 13:52:19,017 - Logger - INFO - - SeleniumCore - UKUPAN broj elemenata: 2 -   -   - 
+2022-05-11 13:52:19,042 - Logger - INFO - - SeleniumCore - Filtrirano, VIDLJIVIH: 1 -   -   - 
+2022-05-11 13:52:19,042 - Logger - INFO - - SeleniumCore - findElem, dobijen broj elemenata: 1 -   -   - 
+2022-05-11 13:52:19,251 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269939083.png -   - 
+2022-05-11 13:52:19,288 - Logger - INFO - - SeleniumCore - Click na:  -  -   - 
+2022-05-11 13:52:29,354 - Logger - INFO - - DROP DOWN SPUSTANJE: - Tip cene objekta - columnSelect1 -   - 
+2022-05-11 13:52:29,355 - Logger - INFO - - SeleniumCore - findElements with WAIT - //label[contains(@id,'columnSelect1_label') or contains(@id,'columnselect1_label')] -   - 
+2022-05-11 13:52:29,367 - Logger - INFO - - SeleniumCore - UKUPAN broj elemenata: 1 -   -   - 
+2022-05-11 13:52:29,381 - Logger - INFO - - SeleniumCore - Filtrirano, VIDLJIVIH: 1 -   -   - 
+2022-05-11 13:52:29,599 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269949426.png -   - 
+2022-05-11 13:52:29,637 - Logger - INFO - - SeleniumCore - clickWithPerform na:  - Id -   - 
+2022-05-11 13:52:29,946 - Logger - INFO - - DROP DOWN ODABIR: - Tip cene objekta - columnSelect1 -   - 
+2022-05-11 13:52:29,946 - Logger - INFO - - SeleniumCore - findElements with WAIT - //div[contains(@class,'ui-selectonemenu-items-wrapper')]//li[contains(.,'Tip cene objekta') or contains(.,'tip cene objekta') or contains(.,'Tip cene objekta')] -   - 
+2022-05-11 13:52:29,962 - Logger - INFO - - SeleniumCore - UKUPAN broj elemenata: 2 -   -   - 
+2022-05-11 13:52:29,996 - Logger - INFO - - SeleniumCore - Filtrirano, VIDLJIVIH: 1 -   -   - 
+2022-05-11 13:52:30,232 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269950052.png -   - 
+2022-05-11 13:52:30,268 - Logger - INFO - - SeleniumCore - Click na:  - Tip cene objekta -   - 
+2022-05-11 13:52:40,362 - Logger - INFO - - SeleniumCore - findElem -   -   - 
+2022-05-11 13:52:40,362 - Logger - INFO - - SeleniumCore - findElements with WAIT - //input[contains(@id,'searchForm:inputValue1') and contains(@id,'1') and not(contains(@id,'0'))] -   - 
+2022-05-11 13:52:40,391 - Logger - INFO - - SeleniumCore - UKUPAN broj elemenata: 1 -   -   - 
+2022-05-11 13:52:40,408 - Logger - INFO - - SeleniumCore - Filtrirano, VIDLJIVIH: 1 -   -   - 
+2022-05-11 13:52:40,408 - Logger - INFO - - SeleniumCore - findElem, dobijen broj elemenata: 1 -   -   - 
+2022-05-11 13:52:40,421 - Logger - INFO - - SeleniumCore - getAttributeValue: -  -   - 
+2022-05-11 13:52:40,421 - Logger - INFO - - SeleniumCore - Pražnjenje podataka TEXT -   -   - 
+2022-05-11 13:52:42,455 - Logger - INFO - - SeleniumCore - Postavljenje novih podataka u input:  - O -   - 
+2022-05-11 13:52:42,746 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269962579.png -   - 
+2022-05-11 13:52:42,773 - Logger - INFO - - SeleniumCore - Koristim TAB nakon unosa... -   -   - 
+2022-05-11 13:52:44,823 - Logger - INFO - - SeleniumCore - findElem -   -   - 
+2022-05-11 13:52:44,823 - Logger - INFO - - SeleniumCore - findElements with WAIT - //a[contains(@id,'addConditionBtn') and contains(@class,'fa fa-plus-circle')] -   - 
+2022-05-11 13:52:44,839 - Logger - INFO - - SeleniumCore - UKUPAN broj elemenata: 2 -   -   - 
+2022-05-11 13:52:44,863 - Logger - INFO - - SeleniumCore - Filtrirano, VIDLJIVIH: 1 -   -   - 
+2022-05-11 13:52:44,863 - Logger - INFO - - SeleniumCore - findElem, dobijen broj elemenata: 1 -   -   - 
+2022-05-11 13:52:45,081 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269964909.png -   - 
+2022-05-11 13:52:45,119 - Logger - INFO - - SeleniumCore - Click na:  -  -   - 
+2022-05-11 13:52:55,199 - Logger - INFO - - DROP DOWN SPUSTANJE: - Vreme od - columnSelect2 -   - 
+2022-05-11 13:52:55,199 - Logger - INFO - - SeleniumCore - findElements with WAIT - //label[contains(@id,'columnSelect2_label') or contains(@id,'columnselect2_label')] -   - 
+2022-05-11 13:52:55,212 - Logger - INFO - - SeleniumCore - UKUPAN broj elemenata: 1 -   -   - 
+2022-05-11 13:52:55,227 - Logger - INFO - - SeleniumCore - Filtrirano, VIDLJIVIH: 1 -   -   - 
+2022-05-11 13:52:55,434 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269975277.png -   - 
+2022-05-11 13:52:55,472 - Logger - INFO - - SeleniumCore - clickWithPerform na:  - Id -   - 
+2022-05-11 13:52:55,796 - Logger - INFO - - DROP DOWN ODABIR: - Vreme od - columnSelect2 -   - 
+2022-05-11 13:52:55,796 - Logger - INFO - - SeleniumCore - findElements with WAIT - //div[contains(@class,'ui-selectonemenu-items-wrapper')]//li[contains(.,'Vreme od') or contains(.,'vreme od') or contains(.,'Vreme od')] -   - 
+2022-05-11 13:52:55,814 - Logger - INFO - - SeleniumCore - UKUPAN broj elemenata: 3 -   -   - 
+2022-05-11 13:52:55,853 - Logger - INFO - - SeleniumCore - Filtrirano, VIDLJIVIH: 1 -   -   - 
+2022-05-11 13:52:56,087 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269975905.png -   - 
+2022-05-11 13:52:56,113 - Logger - INFO - - SeleniumCore - Click na:  - Vreme od -   - 
+2022-05-11 13:53:06,220 - Logger - INFO - - SeleniumCore - findElem -   -   - 
+2022-05-11 13:53:06,220 - Logger - INFO - - SeleniumCore - findElements with WAIT - //input[contains(@id,'searchForm:inputValue1') and contains(@id,'2')] -   - 
+2022-05-11 13:53:06,233 - Logger - INFO - - SeleniumCore - UKUPAN broj elemenata: 1 -   -   - 
+2022-05-11 13:53:06,247 - Logger - INFO - - SeleniumCore - Filtrirano, VIDLJIVIH: 1 -   -   - 
+2022-05-11 13:53:06,247 - Logger - INFO - - SeleniumCore - findElem, dobijen broj elemenata: 1 -   -   - 
+2022-05-11 13:53:06,261 - Logger - INFO - - SeleniumCore - getAttributeValue: -  -   - 
+2022-05-11 13:53:06,261 - Logger - INFO - - SeleniumCore - Pražnjenje podataka TEXT -   -   - 
+2022-05-11 13:53:08,296 - Logger - INFO - - SeleniumCore - Postavljenje novih podataka u input:  - 27.02.2014 00:00:01 -   - 
+2022-05-11 13:53:08,887 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269988656.png -   - 
+2022-05-11 13:53:08,927 - Logger - INFO - - SeleniumCore - Koristim TAB nakon unosa... -   -   - 
+2022-05-11 13:53:10,980 - Logger - INFO - - SeleniumCore - findElem -   -   - 
+2022-05-11 13:53:10,980 - Logger - INFO - - SeleniumCore - findElements with WAIT - //a[contains(@id,'addConditionBtn') and contains(@class,'fa fa-plus-circle')] -   - 
+2022-05-11 13:53:11,007 - Logger - INFO - - SeleniumCore - UKUPAN broj elemenata: 2 -   -   - 
+2022-05-11 13:53:11,035 - Logger - INFO - - SeleniumCore - Filtrirano, VIDLJIVIH: 1 -   -   - 
+2022-05-11 13:53:11,035 - Logger - INFO - - SeleniumCore - findElem, dobijen broj elemenata: 1 -   -   - 
+2022-05-11 13:53:11,218 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652269991077.png -   - 
+2022-05-11 13:53:11,260 - Logger - INFO - - SeleniumCore - Click na:  -  -   - 
+2022-05-11 13:53:21,331 - Logger - INFO - - DROP DOWN SPUSTANJE: - Potvrđen - columnSelect3 -   - 
+2022-05-11 13:53:21,331 - Logger - INFO - - SeleniumCore - findElements with WAIT - //label[contains(@id,'columnSelect3_label') or contains(@id,'columnselect3_label')] -   - 
+2022-05-11 13:53:21,351 - Logger - INFO - - SeleniumCore - UKUPAN broj elemenata: 1 -   -   - 
+2022-05-11 13:53:21,368 - Logger - INFO - - SeleniumCore - Filtrirano, VIDLJIVIH: 1 -   -   - 
+2022-05-11 13:53:21,592 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652270001417.png -   - 
+2022-05-11 13:53:21,630 - Logger - INFO - - SeleniumCore - clickWithPerform na:  - Id -   - 
+2022-05-11 13:53:21,961 - Logger - INFO - - DROP DOWN ODABIR: - Potvrđen - columnSelect3 -   - 
+2022-05-11 13:53:21,961 - Logger - INFO - - SeleniumCore - findElements with WAIT - //div[contains(@class,'ui-selectonemenu-items-wrapper')]//li[contains(.,'Potvrđen') or contains(.,'potvrđen') or contains(.,'Potvrđen')] -   - 
+2022-05-11 13:53:21,978 - Logger - INFO - - SeleniumCore - UKUPAN broj elemenata: 4 -   -   - 
+2022-05-11 13:53:22,030 - Logger - INFO - - SeleniumCore - Filtrirano, VIDLJIVIH: 1 -   -   - 
+2022-05-11 13:53:22,265 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652270002086.png -   - 
+2022-05-11 13:53:22,302 - Logger - INFO - - SeleniumCore - Click na:  - Potvrđen -   - 
+2022-05-11 13:53:32,388 - Logger - INFO - - SeleniumCore - findElem -   -   - 
+2022-05-11 13:53:32,389 - Logger - INFO - - SeleniumCore - findElements with WAIT - //input[contains(@id,'searchForm:inputValue1') and contains(@id,'3')] -   - 
+2022-05-11 13:53:32,409 - Logger - INFO - - SeleniumCore - UKUPAN broj elemenata: 1 -   -   - 
+2022-05-11 13:53:32,425 - Logger - INFO - - SeleniumCore - Filtrirano, VIDLJIVIH: 1 -   -   - 
+2022-05-11 13:53:32,425 - Logger - INFO - - SeleniumCore - findElem, dobijen broj elemenata: 1 -   -   - 
+2022-05-11 13:53:32,438 - Logger - INFO - - SeleniumCore - getAttributeValue: -  -   - 
+2022-05-11 13:53:32,438 - Logger - INFO - - SeleniumCore - Pražnjenje podataka TEXT -   -   - 
+2022-05-11 13:53:34,476 - Logger - INFO - - SeleniumCore - Postavljenje novih podataka u input:  - D -   - 
+2022-05-11 13:53:34,809 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652270014625.png -   - 
+2022-05-11 13:53:34,843 - Logger - INFO - - SeleniumCore - Koristim TAB nakon unosa... -   -   - 
+2022-05-11 13:53:36,887 - Logger - INFO - - DominusAction - dominus_taster: - //button[.='Izvrši'] -   - 
+2022-05-11 13:53:36,937 - Logger - INFO - - SeleniumCore - waitForXpathElement - //button[.='Izvrši'] -   - 
+2022-05-11 13:53:37,152 - Logger - INFO - - Photo - Zapis sacuvan na lokaciji:  - C:\Users\programi\Desktop\Log\ATcenovnikprodaje010_UnosEXE.xls\1652270016983.png -   - 
+2022-05-11 13:53:37,189 - Logger - INFO - - SeleniumCore - Click na:  - Izvrši -   - 
